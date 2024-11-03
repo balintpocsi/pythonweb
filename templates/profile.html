@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+    <h1>Welcome, {{ profile['username'] }}</h1>
+
+    <form action="{{ url_for('profile') }}" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="{{ profile['name'] }}"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" value="{{ profile['email'] }}"><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" id="phone" value="{{ profile['phone'] }}"><br>
+
+        <label for="linkedin">LinkedIn:</label>
+        <input type="url" name="linkedin" id="linkedin" value="{{ profile['linkedin_url'] }}"><br>
+
+        <label for="about_me">About Me:</label>
+        <textarea name="about_me" id="about_me" rows="4" cols="50">{{ profile['about_me'] }}</textarea><br>
+
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <a href="{{ url_for('logout') }}">Logout</a>
+{% endblock %}

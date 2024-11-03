@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Registered Profiles{% endblock %}
+
+{% block content %}
+    <h1>Registered Profiles</h1>
+    <ul>
+        {% for profile in profiles %}
+        <li>
+            <strong>Name:</strong> {{ profile.name }}<br>
+            <strong>Email:</strong> {{ profile.email }}<br>
+            <strong>Phone:</strong> {{ profile.phone }}<br>
+            <strong>LinkedIn:</strong> <a href="{{ profile.linkedin_url }}">{{ profile.linkedin_url }}</a><br>
+            <strong>About Me:</strong> {{ profile.about_me }}<br>
+            <a href="{{ url_for('public_profile', user_id=profile.id) }}">View Profile</a><br><br>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

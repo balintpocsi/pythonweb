@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Gathering</h1>
+    {% if 'username' in session %}
+        <p>Hello, {{ session['username'] }}! Welcome back!</p>
+    {% else %}
+        <p>Welcome! Please <a href="{{ url_for('login') }}">log in</a> or <a href="{{ url_for('register') }}">register</a> to get started.</p>
+    {% endif %}
+{% endblock %}

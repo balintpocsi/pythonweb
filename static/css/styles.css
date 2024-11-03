@@ -1,0 +1,57 @@
+.flash-messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flash-messages .error {
+    color: red;
+    font-weight: bold;
+}
+
+ul.flash-messages .error {
+    color: red;
+    font-weight: bold;
+}
+
+.messages-list {
+    margin-top: 20px;
+}
+
+.message-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+}
+
+.username {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.username:hover {
+    text-decoration: underline;
+}
+
+.timestamp {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.message-body {
+    padding: 10px;
+    color: #333;
+    margin-top: 5px;
+}
